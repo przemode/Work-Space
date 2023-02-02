@@ -1,0 +1,27 @@
+.TimerCardContainer {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #665794;
+    color: #fff;
+    -webkit-box-shadow: 0px 3px 54px -16px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 3px 54px -16px rgba(66, 68, 90, 1);
+    box-shadow: 0px 3px 54px -16px rgba(66, 68, 90, 1);
+}
+
+.TimerCardTitle {
+    font-size: 0.8em;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+}
+
+.TimerValueContainer {
+    font-size: 1.9em;
+}
+
+.TimerControlBtnsContainer {
+    display: flex;
+    justify-content: flex-end;
+}

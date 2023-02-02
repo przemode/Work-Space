@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap');
+
+.HeaderBox {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 80px;
+    background: rgb(56,42,104);
+    background: linear-gradient(90deg, rgb(88, 67, 156) 0%, rgb(58, 44, 107) 100%);
+    color: #fff;
+    justify-content: center;
+    padding: 0 2.5% 0 2.5%;
+    
+}
+
+.Logo {
+    font-family: 'Unbounded', cursive;
+    font-size: 1.5em;
+}
+
+.HeaderTime {
+    font-size: 0.9em;
+}
