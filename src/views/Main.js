@@ -17,12 +17,8 @@ function Main() {
     const [gitlabData, setGitlabData] = useState()
     const [isGitlabData, setIsGitlabData] = useState()
 
-    useEffect(() => {
-        setIsGitlabData(true)
-    }, [gitlabData])
-      
-    console.log(gitlabData)
     const addTimer = (name) => {
+        setName('')
         let tempArr = timer
         const temp = {
             name
@@ -34,6 +30,12 @@ function Main() {
         setIsShownAddTimerDialog(false)
         toaster.success('Well done, the timer has been added')
     }
+
+    const handleRemoveTimer = (name) => {
+        const temp = timer.filter((x) => x.name !== name)
+        setTimer(temp)
+    }
+
     return (
         <>
             <div className="App">
@@ -41,8 +43,11 @@ function Main() {
                 <Tools
                     addTimer={() => setIsShownAddTimerDialog(true)}
                 />
-                {timer.map(x => 
-                    <TimerCard name={x.name}/>
+                {timer.map((x, index) => 
+                    <TimerCard
+                        onClick={() => handleRemoveTimer(x.name)}
+                        name={x.name}
+                    />
                 )}
             </div>
 

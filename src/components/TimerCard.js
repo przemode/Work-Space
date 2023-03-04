@@ -4,8 +4,9 @@ import '../styles/Tools.scss';
 import { Button } from 'evergreen-ui'
 import moment from "moment";
 import '../styles/TimerCard.scss'
+import { FiTrash2 } from "react-icons/fi";
 
-function TimerCard({name}) {
+function TimerCard({name, onClick}) {
 
     const [diff, setDiff] = useState(0);
     const [timer, setTimer] = useState();
@@ -32,6 +33,11 @@ function TimerCard({name}) {
         <div className="TimerCardContainer">
             <div className="TimerCardTitle">
                 {name}
+                <Button intent="none" onClick={onClick}>
+                    <h2>
+                        <FiTrash2/>
+                    </h2>
+                </Button>
             </div>
             <div className="TimerValueContainer">
                 {formatedTimer}
@@ -56,7 +62,6 @@ function TimerCard({name}) {
                         Start
                     </Button>
                 )}
-
 
                 <Button 
                     intent="danger"

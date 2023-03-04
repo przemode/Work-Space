@@ -11,10 +11,12 @@
 }
 
 .TimerCardTitle {
-    font-size: 0.8em;
+    font-size: 1.2em;
     width: 100%;
     border-bottom: 1px solid #fff;
     padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .TimerValueContainer {
